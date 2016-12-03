@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Administrador</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script type="text/javascript" src="javascript/script.js"></script>
+</head>
+<body>
+<!--Cabeçalho-->
+	<div id="topo-admin">
+		<p>Seja Bem Vindo "admin"</p>
+		<img src="img/admin.jpg">
+	</div>
+	<!--corpo da pagina-->
+	<div id="corpo-admin">
+		<hr>
+		<!--area de busca dos pedidos-->
+		<div class="form">
+			<h3>Alterar Evento</h3>
+			<form name="busca"  >
+			<div class="label">
+				<label for="buscar-evento">Buscar Evento</label>
+					<input type="text" name="busca-evento" placeholder="n° do evento">
+					<br>
+			</div>		
+			<div>
+				<button type="submit">Buscar</button>
+			</div>			
+			</form>	
+			<hr>
+		</div>
+		<!--area de alteraçao dos pedidos-->
+		<div class="form">
+			<h3>Alterar Data</h3>
+			<form name="altera">
+			<div class="label">				
+				<label for="nova-data">Nova Data</label>
+					<input type="date" name="nova-data" placeholder="__/__/____">
+					<br>
+			</div>
+			<h3>Alterar Horario</h3>
+			<div class="label">
+				<label for="nvhr_inico">Nova Hora de Inicio</label>
+					<input type="time" name="nvhr_inicio" placeholder="--:--">
+					<br>
+			</div>
+			<div class="label">
+				<label for="nvhr_termino">Nova Hora de Termino</label>
+					<input type="time" name="nvhr_termino" placeholder="--:--">
+					<br>
+			</div>
+			<div>
+				<button type="submit">Salvar Alteraçoes</button>
+			</div>			
+			</form>
+		</div>	
+
+	
+</body>
+</html>

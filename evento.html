@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+	<html>
+	<!--Titulo e CSS-->
+		<head>
+			<title>Novo evento</title>
+			<meta charset="utf-8" />
+			<link rel="stylesheet" type="text/css" href="css/normalize.css">
+			<link rel="stylesheet" type="text/css" href="css/estilo.css">
+			<link rel="icon" type="image/png" href="img/balao.png" />
+			<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+			<script type="text/javascript" src="javascript/script.js"></script>
+			
+		</head>		
+		<body>
+			<!--Menu de navegação-->
+			<nav id="menu">				
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
+					<li><a href="cadastro.html">Cadastro</a></li>
+					<li><a href="evento.html">Novo evento</a></li>
+				</ul>
+			</nav>
+			<!--Cabeçalho da pagina-->
+			<header>
+				<h1>Novo evento</h1>
+				<p>Escolha o tipo da festa, decoração e nossos deliciosos aperitivos!</p>
+			</header>
+			<!--Corpo do site-->
+			<div id="login">
+				<h2>Ja é cadastrado?</h2>
+				 <form name="acesso" onsubmit="return logar('user,senha')" action="post">
+				 	<label for="user">Usuário:</label>
+				 	<input type="email" id="user">
+				 	<label for="senha">Senha:</label>
+				 	<input type="password" id="senha">
+				 	<div>
+				 	<button type="submit">Login</button>
+				 	</div>	
+				 </form>
+			</div>
+			<div id="evento" >
+				<h2>Marque seu evento aqui:</h2>
+				<div class="form">
+						<form name="festa" onsubmit="return confirma()" action="">
+						<div class="label">
+							<label for="nome_aniv">Nome do Aniversariante</label>	
+								<input type="text" id="nome_aniv" size="45" placeholder="Obrigatorio*" />
+								<br />
+						</div>
+						<div class="label">	
+							<label for="end_festa">Endereço da festa</label>
+								<input type="text" id="end_festa" size="50" placeholder="Obrigatorio*"/>			
+								<br />
+						</div>
+						<div class="label">	
+							<label for="data_festa">Data</label>
+								<input type="date" id="data_festa" placeholder="__/_ _/____" />			
+								<br/>
+						</div>
+						<div class="label">	
+							<label for="hr_inicio">Hora de inicio</label>
+								<input type="time" id="hr_inicio" placeholder="--:--" size="5" />			
+								<br/>
+						</div>
+						<div class="label">	
+							<label for="hr_termino">Hora Termino</label>
+								<input type="time" id="hr_termino" placeholder="--:--" size="5" />		
+								<br/>
+						</div>
+						<div class="label">	
+							<label for="pqtd_convidados">Quantidade de convidados</label>
+								<select id="pqtd_convidados" size="1">
+									<option value="10">10</option>
+									<option value="20">20</option>
+									<option value="30">30</option>
+									<option value="40">40</option>
+									<option value="50">50</option>
+									<option value="100">100</option>
+									<option value="200">200</option>									
+								</select>
+									<br/>
+						</div>
+						<hr>
+						<h3>Tema da Festa</h3>						
+						<div class="label">	
+							<label for="ptema">Tema</label>
+								<select id="ptema" size="1">
+									<option value="1">1-Infantil</option>
+									<option value="2">2-Formatura</option>
+									<option value="3">3-Debutante</option>																		
+								</select>
+								<br/>
+						</div>
+						<div class="label">	
+							<label for="pdecoracao">Decoração</label>
+								<input type="text" id="pdecoracao" size="50"/>			
+								<br />
+						</div>
+						<div class="label">	
+							<label for="pcor_toalha">Cor da Toalha</label>
+								<select id="ptema" size="1">
+									<option value="vermelho">Vermelho</option>
+									<option value="amarelo">Amarelo</option>
+									<option value="azul">Azul</option>																		
+								</select>
+								<br/>
+						</div>
+						<div class="label">	
+							<label for="pcor_baloes">Cor dos Balões</label>
+								<select id="ptema" size="1">
+									<option value="vermelho">Vermelho</option>
+									<option value="amarelo">Amarelo</option>
+									<option value="azul">Azul</option>																		
+								</select>
+								<br/>
+						</div>
+						<div class="label">	
+							<label for="pobs">Observações</label>
+								<input type="text" id="pobs" size="50"/>			
+								<br />
+						</div>
+						<hr>
+						<h3>Opcionais</h3>
+						<div class="label">
+							<label for="padd">Quer adicionar mais itens?</label>
+								<input type="radio" id="padd" value="s" checked="checked"/>Sim
+								<input type="radio" id="padd" value="n">Não
+						</div>
+						<div class="label">	
+							<label for="pitem">Item</label>
+								<select id="pitem" size="1">
+									<option value="1">1-Salgados</option>
+									<option value="2">2-Doces</option>
+									<option value="3">3-Bebidas</option>																		
+								</select>			
+								<br />
+						</div>
+						<div class="label">	
+							<label for="pqtd_itens">Quantidade</label>
+								<select id="pqtd_convidados" size="1">
+									<option value="10">10</option>
+									<option value="20">20</option>
+									<option value="30">30</option>
+									<option value="40">40</option>
+									<option value="50">50</option>
+									<option value="100">100</option>
+									<option value="200">200</option>									
+								</select>
+									<br/>
+						</div>
+						<hr>
+						<h3>Forma de Pagamento</h3>
+						<div class="label">
+							<label for="pag">Selecione forma de Pagamento</label>
+								<input type="radio" name="pag" value="vista" checked="checked"/>À Vista
+								<input type="radio" name="pag" value="prazo">À Prazo
+						</div>		
+						<div>		
+								<br/>
+								<br/>
+								<input type="reset" value="Apagar formulario"/>
+								<input type="submit" value="Enviar"/>
+						</div>		
+						</form>
+					</div>		
+			</div>			
+			<!--Rodapé-->
+			<footer>
+				<p>Rafaella's Buffet&copy;</p>
+				<p> Desenvolvido por SwagDesign</p>
+			</footer>
+		</body>
+	</html>	
